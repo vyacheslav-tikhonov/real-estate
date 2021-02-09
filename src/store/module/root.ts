@@ -3,7 +3,7 @@ import { realEstate } from './realEstate';
 
 const root = new Module({
   modules: {
-    realEstate,
+    realEstate
   },
 });
 
