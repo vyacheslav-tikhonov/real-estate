@@ -9,14 +9,14 @@
     <main>
       <aside class="filter">
         <FlatsFilter
-          ref="flatsFilter"
-          @update="onFilterUpdate()"
+          :flats="flats"
+          @update="onFilterUpdate($event)"
         />
       </aside>
 
       <section class="flats">
         <FlatCard
-          v-for="flat in flats"
+          v-for="flat in filteredFlats"
           :key="flat.id"
           :flat="flat"
         />

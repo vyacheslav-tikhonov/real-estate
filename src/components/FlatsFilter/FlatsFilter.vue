@@ -6,7 +6,7 @@
         КОМНАТЫ
       </div>
       <v-btn-toggle
-        v-model="flats"
+        v-model="rooms"
         multiple
       >
         <v-btn
@@ -41,7 +41,7 @@
         <input
           number
           min="0"
-          max="99"
+          max="120"
           step="1"
           class="input"
           :value="floor[0]"
@@ -60,7 +60,7 @@
           color="#70D24E"
           track-color="#D8D8D8"
           min="1"
-          max="999"
+          max="120"
         />
       </div>
     </div>
@@ -96,7 +96,7 @@
           color="#70D24E"
           track-color="#D8D8D8"
           min="1"
-          max="60"
+          max="999"
         />
       </div>
     </div>
@@ -110,6 +110,7 @@
           number
           min="0"
           max="120"
+          step="0.1"
           class="input"
           :value="price[0]"
           @change="onChangePrice($event.target.value, 0)"
@@ -119,7 +120,7 @@
           number
           min="0"
           max="120"
-          step="1"
+          step="0.1"
           class="input"
           :value="price[1]"
           @change="onChangePrice($event.target.value, 1)"
@@ -130,7 +131,7 @@
           number
           min="0"
           max="120"
-          step="1"
+          step="0.1"
           color="#70D24E"
           track-color="#D8D8D8"
           v-model="price"
@@ -141,7 +142,7 @@
 
     <div class="buttons">
       <button
-        @click="onApply()"
+        @click="updateSettingsObject()"
         class="apply-button"
       >
         Применить
