@@ -3,7 +3,7 @@ import { Flat } from "@/interfaces/entities/realEstate/types";
 import RealEstateState from "./state"; 
 
 export default class RealEstateGetters extends Getters<RealEstateState> {
-  public getFlats():  Flat[] {
+  public get flats():  Flat[] {
     return this.state.flats;
   }
 }

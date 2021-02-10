@@ -4,7 +4,7 @@ import RealEstateMutations from './mutations';
 import RealEstateState from './state';
 import RealEstateGetters from './getters';
 
-const flats : Flat[] = [
+const flats: Flat[] = [
 	{
 		building_id: 73,
 		building_name: "1 этап 1а корпуса",
@@ -79,7 +79,7 @@ const flats : Flat[] = [
 		building_id: 37,
 		building_name: "1 этап 1а корпуса",
 		floor: 10,
-		id: 20320,
+		id: 20323,
 		is_studio: 1,
 		number: "163",
 		plan: "/img/bb8d/9eeb90d9c7aeeed41fb41c0b5e383013.jpg",
@@ -107,7 +107,7 @@ const flats : Flat[] = [
 		building_id: 87,
 		building_name: "1 этап 1а корпуса",
 		floor: 10,
-		id: 33320,
+		id: 33324,
 		is_studio: 1,
 		number: "163",
 		plan: "/img/bb8d/9eeb90d9c7aeeed41fb41c0b5e383013.jpg",
@@ -124,7 +124,7 @@ export default class RealEstateActions extends Actions<
   RealEstateGetters,
   RealEstateMutations
 > {
-  public getFfats() {
+  public getFlats() {
     this.commit('setFlats', flats);
   }
 }
