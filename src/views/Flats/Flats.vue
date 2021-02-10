@@ -8,7 +8,10 @@
 
     <main>
       <aside class="filter">
-        <FlatsFilter />
+        <FlatsFilter
+          ref="flatsFilter"
+          @update="onFilterUpdate()"
+        />
       </aside>
 
       <section class="flats">

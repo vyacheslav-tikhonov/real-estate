@@ -1,18 +1,16 @@
 import { Vue, Component, Emit } from 'vue-property-decorator';
-
-interface FlatsFilterSettins {
-  floor: [number, number];
-  square: [number, number];
-  price: [number, number];
-  flats: number[];
-};
+import { FlatsFilterSettins, FlatsFilterInterface } from './types';
 
 @Component
-export default class FlatsFilter extends Vue {
+export default class FlatsFilter extends Vue implements FlatsFilterInterface  {
   private floor: [number, number] = [1, 99];
   private square: [number, number] = [1, 999];
   private price: [number, number] = [0, 120];
   private flats: number[] = [];
+
+  public getSettings(): FlatsFilterSettins {
+    return this.prepareSettingsObject();
+  }
 
   private onChangeFloor(value: number , index: number): void {
     this.$set(this.floor, index, value);
@@ -26,8 +24,7 @@ export default class FlatsFilter extends Vue {
     this.$set(this.square, index, value);
   }
 
-  @Emit('update')
-  private onApply(): FlatsFilterSettins {
+  private prepareSettingsObject() {
     const data = {
       floor: this.floor,
       square: this.square,
@@ -35,6 +32,11 @@ export default class FlatsFilter extends Vue {
       flats: this.flats,
     };  
     return data;
+  }
+
+  @Emit('update')
+  private onApply(): FlatsFilterSettins {
+    return this.prepareSettingsObject();
   }
 
   private clearFilter(): void {
