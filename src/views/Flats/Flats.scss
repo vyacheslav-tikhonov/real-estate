@@ -1,0 +1,33 @@
+.real-estate {
+  background: #F8F8F8;
+  border-radius: 10px;
+  padding: 40px;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+
+  &__title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 34px;
+    line-height: 60px;
+    text-transform: uppercase;
+    color: #2C323A;
+  }
+}
+
+.flats {
+  // display: grid;
+  // grid-template-columns: repeat(4, auto);
+  flex-wrap: wrap;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}

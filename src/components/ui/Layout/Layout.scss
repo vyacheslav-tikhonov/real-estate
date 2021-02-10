@@ -1,0 +1,14 @@
+.layout {
+  width: 100%;
+  background: #2F2E2D;
+  overflow-y: hidden;
+
+  &__container {
+    width: 100%;
+    border-radius: 10px;
+    background: #fff;
+    margin: 40px;
+    padding: 15px;
+    overflow-y: hidden;
+  }
+}
