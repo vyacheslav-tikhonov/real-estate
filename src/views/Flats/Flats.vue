@@ -8,6 +8,7 @@
 
     <main>
       <aside class="filter">
+        <FlatsFilter />
       </aside>
 
       <section class="flats">

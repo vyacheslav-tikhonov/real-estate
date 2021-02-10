@@ -23,11 +23,9 @@
 }
 
 .flats {
-  // display: grid;
-  // grid-template-columns: repeat(4, auto);
   flex-wrap: wrap;
   max-width: 1200px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 30px;
 }

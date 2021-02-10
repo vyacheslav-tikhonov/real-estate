@@ -29,7 +29,6 @@
         {{ number }}
       </div>
 
-      <transition name="resize">
         <div 
           v-if="!isHovered"
           class="plan__image">
@@ -46,7 +45,6 @@
               :src="getImageUrl"
             >
         </div>
-      </transition>
     </div>
 
     <div class="footer">
